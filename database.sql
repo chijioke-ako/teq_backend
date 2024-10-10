@@ -1,4 +1,4 @@
-CREATE DATABASE teqbridgeltd;
+-- CREATE DATABASE teqbridgeltd;
 
 CREATE TABLE partners (
     id BIGSERIAL NOT NULL,
@@ -71,7 +71,7 @@ CREATE TABLE test(
 
 DROP TABLE users; 
 
-CREATE TYPE roles AS ENUM('user', 'admin');
+-- CREATE TYPE roles AS ENUM('user', 'admin');
 --    CREATE TABLE users (\dt
 --     id SERIAL PRIMARY KEY,
 --     firstname VARCHAR(255),
@@ -81,8 +81,4 @@ CREATE TYPE roles AS ENUM('user', 'admin');
 --     role roles);
 
 
-INSERT INTO users (firstname, lastname, email, password , role) 
-VALUES ('John','Smith', 'john@gmail.com','john123.', 'admin')
 
-INSERT INTO person (id, first_name, last_name, gender, date_of_birth, email)
- VALUES (2,'john', 'Smith', 'male','1990-01-09', 'john@gmail.com');

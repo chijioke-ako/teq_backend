@@ -1,4 +1,5 @@
-const { Pool } = require('pg');
+const { Pool } = require("pg");
+
 
 const pool = new Pool({
   user: process.env.PG_USER,
@@ -7,12 +8,9 @@ const pool = new Pool({
   password: process.env.PG_PASSWORD,
   port: process.env.PG_PORT,
   max: 20,
-  idleTimeoutMillis: 30000, 
+  idleTimeoutMillis: 30000,
   connectionTimeoutMillis: 2000,
+  // ssl: { rejectUnauthorized: false },
 });
-
-// const pool = new Pool({
-//   connectionString: process.env.POSTGRES_URLDB + '?sslmode=require',
-// });
 
 module.exports = pool;

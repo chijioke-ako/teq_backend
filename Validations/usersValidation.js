@@ -31,12 +31,6 @@ firstname: yup.string()
       passwordRegExp,
       "password must be at least one uppercase letter, one lowercase letter, one number and one special character 8."
     ),
-  confirmPassword: yup.string()
-    .required("confirm Password required")
-    .oneOf(
-      [yup.ref("password"), null],
-      " Must match the the first password input"
-    ),
 });
 
 module.exports = userValidation;

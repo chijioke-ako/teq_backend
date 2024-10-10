@@ -18,12 +18,6 @@ app.set("trust proxy", 1);
 app.use(express.json());
 app.use(bodyParser.json());
 app.use(morgan("dev"));
-// app.use((error, req, res, next) => {
-//   error.statusCode = error.statusCode || 500;
-//   res.status(error.statusCode).json({
-//      status:
-//    });
-//  })
 
 app.use("/upload", express.static("upload"));
 app.use("/uploads", express.static("uploads"));
